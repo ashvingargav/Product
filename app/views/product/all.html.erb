@@ -1,0 +1,15 @@
+<h3>All Products</h3>
+<br>
+<%= link_to('Add New Product',{ :action => 'new'})%>
+<br><br>
+<table border="1">
+  <tr><th>Name</th><th>Description</th><th>Price</th></tr>
+<% @product.each do |i| %>
+  <tr>
+    <td><%=  i.name %></td>
+    <td><%=  i.description %></td>
+    <td><%=  i.price %></td>
+  </tr>
+<%end%>
+
+</table>

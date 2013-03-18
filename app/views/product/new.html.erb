@@ -1,0 +1,10 @@
+<h3>Product#new</h3>
+<%= form_for @product , :as=> :product, :url=>create_product_path , :method=>'post' do |f| %>
+<p>Product Name</p>
+<%= f.text_field:name  %>
+<p>Product Description</p>
+<%= f.text_area:description, :rows=> '10',:columns =>'60' %>
+<p>Product Price</p>
+<%= f.text_field:price %><br/><br/>
+<%= f.submit :submit %>
+<% end %>
